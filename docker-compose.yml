@@ -5,6 +5,7 @@ services:
     build: .
     container_name: flask-kube-app
     image: flask-kube-app:latest
+    restart: always
     ports:
       - "80:5000"
     volumes:
