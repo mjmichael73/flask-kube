@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-kube-app
+  labels:
+    app: flask-kube-app-label
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flask-kube-app-label
+  template:
+    metadata:
+      labels:
+        app: flask-kube-app-label
+    spec:
+      containers:
+        - name: flask-kube-app
+          image: flask-kube-app:latest
+          ports:
+            - containerPort: 5000
