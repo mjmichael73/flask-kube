@@ -15,11 +15,20 @@ I'm using ubuntu and I've installed minikube.
     minikube kubectl -- get pods
     minikube kubectl -- delete deployment deployment_name
     minikube kubectl -- apply -f deployment.yml
+    minikube kubectl -- get po,svc
+
+### helm commands:
+    - helm create kube-infra-flask-app
+    - helm template kube-infra-flask-app
+    - helm install release-name kube-infra-flask-app
+    - helm list
 
 ### Note:
 If you are getting ImagePullBackOff in your local cluster, try to push your Docker image
 into a Container Registry.
 
+### Note:
+minikube tunnel -- --target NodePortIP:NodePort
 
 # TODO:
 - Adding tests for source code.
