@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: flask-kube-app
-          image: flask-kube-app:latest
+          image: mojimich2015/flask-kube-app:latest
           ports:
             - containerPort: 5000
